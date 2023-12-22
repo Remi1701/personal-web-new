@@ -50,7 +50,7 @@
         </div>
         <div class="card">
           <div class="box">
-            <img src="g" alt="" />
+            <img src="" alt="" />
             <div class="text">Someone name</div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
