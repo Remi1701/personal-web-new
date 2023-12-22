@@ -12,10 +12,11 @@
     --body-color: #E4E9F7;
     --nav-color: #004d8d;
     --side-nav: #010718;
+    --big-text-color: #2c6ea3;
     --text-color: #FFF;
-    --search-bar: #F2F2F2;
-    --search-text: #010718;
     --title-color: #333;
+    --card: #2c6ea3;
+    --icon: #fff;
 }
 
 body{
@@ -27,9 +28,12 @@ body.dark{
     --body-color: #18191A;
     --nav-color: #242526;
     --side-nav: #242526;
+    --big-text-color: crimson;
     --text-color: #CCC;
     --search-bar: #242526;
     --title-color: #ccc;
+    --card: #222;
+    --icon: crimson;
 }
 
 nav{
@@ -350,7 +354,7 @@ body.dark .search-field i{
     left: 50%;
     width: 180px;
     height: 3px;
-    background: #111;
+    background: var(--text-color);
     transform: translateX(-50%);
   }
   section .title::after {
@@ -358,15 +362,14 @@ body.dark .search-field i{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    color: crimson;
+    color: var(--text-color);
     padding: 0 5px;
-    background: #fff;
+    background: var(--nav-color);
     transform: translateX(-50%);
   }
   /* home section styling */
   .home {
     display: flex;
-    background: url("images/banner.jpg") no-repeat center;
     height: 100vh;
     color: var(--title-color);
     min-height: 500px;
@@ -394,7 +397,7 @@ body.dark .search-field i{
     margin: 5px 0;
   }
   .home .home-content .text-3 span {
-    color: crimson;
+    color: var(--big-text-color);
     font-weight: 500;
   }
   .home .home-content a {
@@ -436,25 +439,25 @@ body.dark .search-field i{
     margin-bottom: 10px;
   }
   .about .about-content .right .text span {
-    color: crimson;
+    color: var(--big-text-color);
   }
   .about .about-content .right p {
     text-align: justify;
   }
   .about .about-content .right a {
     display: inline-block;
-    background: crimson;
+    background: var(--big-text-color);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid var(--body-color);
     transition: all 0.3s ease;
   }
   .about .about-content .right a:hover {
-    color: crimson;
+    color: var(--text-color);
     background: none;
   }
   
@@ -470,12 +473,12 @@ body.dark .search-field i{
   }
   .services .title::after,
   .teams .title::after {
-    background: #111;
+    background: var(--nav-color);
     content: "what i provide";
   }
   .services .serv-content .card {
     width: calc(33% - 20px);
-    background: #222;
+    background: var(--card);
     text-align: center;
     border-radius: 6px;
     padding: 50px 25px;
@@ -483,7 +486,7 @@ body.dark .search-field i{
     transition: all 0.3s ease;
   }
   .services .serv-content .card:hover {
-    background: crimson;
+    background: var(--card);
   }
   .services .serv-content .card .box {
     transition: all 0.3s ease;
@@ -493,99 +496,21 @@ body.dark .search-field i{
   }
   .services .serv-content .card i {
     font-size: 50px;
-    color: crimson;
+    color: var(--icon);
     transition: color 0.3s ease;
-  }
-  .services .serv-content .card:hover i {
-    color: #fff;
   }
   .services .serv-content .card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
   }
-  
-  /* skills section styling */
-  
-  .skills .title::after {
-    content: "what i know";
-  }
-  .skills .skills-content .column {
-    width: calc(50% - 30px);
-  }
-  .skills .skills-content .left .text {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .skills .skills-content .left p {
-    text-align: justify;
-  }
-  .skills .skills-content .left a {
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-  }
-  .skills .skills-content .left a:hover {
-    color: crimson;
-    background: none;
-  }
-  .skills .skills-content .right .bars {
-    margin-bottom: 15px;
-  }
-  .skills .skills-content .right .info {
-    display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .skills .skills-content .right span {
-    font-weight: 500;
-    font-size: 18px;
-  }
-  .skills .skills-content .right .line {
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-  }
-  .skills .skills-content .right .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
-  }
-  .skills-content .right .html::before {
-    width: 90%;
-  }
-  .skills-content .right .css::before {
-    width: 60%;
-  }
-  .skills-content .right .js::before {
-    width: 80%;
-  }
-  .skills-content .right .php::before {
-    width: 50%;
-  }
-  .skills-content .right .mysql::before {
-    width: 70%;
-  }
-  
+
   /* teams section styling */
   .teams .title::after {
     content: "who with me";
   }
   .teams .carousel .card {
-    background: #222;
+    background: var(--card);
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
@@ -615,7 +540,7 @@ body.dark .search-field i{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid crimson;
+    border: 5px solid var(--icon);
     transition: all 0.3s ease;
   }
   .teams .carousel .card:hover img {
