@@ -11,11 +11,11 @@
         </div>
 
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
@@ -36,7 +36,6 @@ export default {
       const body = document.querySelector("body");
       const nav = document.querySelector("nav");
       const modeToggle = document.querySelector(".dark-light");
-      const searchToggle = document.querySelector(".searchToggle");
       const sidebarOpen = document.querySelector(".sidebarOpen");
       const siderbarClose = document.querySelector(".siderbarClose");
 
@@ -52,9 +51,6 @@ export default {
         } else {
           localStorage.setItem("mode", "dark-mode");
         }
-      });
-      searchToggle.addEventListener("click", () => {
-        searchToggle.classList.toggle("active");
       });
       sidebarOpen.addEventListener("click", () => {
         nav.classList.add("active");

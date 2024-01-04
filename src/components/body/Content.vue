@@ -5,7 +5,7 @@
       <div class="home-content">
         <div class="text-1">Hello, my name is</div>
         <div class="text-2">Rassel Muhammad Indra</div>
-        <div class="text-3">And I'm a <span class="typing">Software Engineer</span></div>
+        <div class="text-3">And I'm a <span class="typing"></span></div>
       </div>
     </div>
   </section>
@@ -30,9 +30,9 @@
   </section>
 
   <!-- teams section start -->
-  <section class="teams" id="teams">
+  <section class="portfolio" id="portfolio">
     <div class="max-width">
-      <h2 class="title">Portfolio</h2>
+      <h2 class="title" style="color: var(--title-color);">Portfolio</h2>
       <div class="carousel owl-carousel">
         <div class="card">
           <div class="box">
@@ -80,20 +80,6 @@
       <div class="serv-content">
         <div class="card">
           <div class="box">
-            <i class="fas fa-paint-brush"></i>
-            <div class="text">Web Design</div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <i class="fas fa-chart-line"></i>
-            <div class="text">Advertising</div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
             <i class="fas fa-code"></i>
             <div class="text">Apps Design</div>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
@@ -106,7 +92,7 @@
   <!-- contact section start -->
   <section class="contact" id="contact">
     <div class="max-width">
-      <h2 class="title">Contact me</h2>
+      <h2 class="title" style="color: var(--title-color);">Contact me</h2>
       <div class="contact-content">
         <div class="column left">
           <div class="text">Get in Touch</div>
@@ -163,7 +149,7 @@
 
   <!-- footer section start -->
   <footer>
-    <span>Created By <a href="https://www.codingnepalweb.com">CodingNepal</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+    <span>Created and Modified By <a href="">Rassel</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
   </footer>
 </template>
 <script>
@@ -206,10 +192,9 @@ export default {
 
       // typing text animation script
       let typed = new Typed(".typing", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        strings: ["Software Engineer"],
         typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
+        backSpeed: 100,
       });
 
       let typed2 = new Typed(".typing-2", {
