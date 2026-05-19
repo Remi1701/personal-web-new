@@ -16,14 +16,16 @@
       <h2 class="title">About me</h2>
       <div class="about-content">
         <div class="column left">
-          <img src="" alt="" />
+          <img src="profile.png" alt="" />
         </div>
         <div class="column right">
           <p>
-            Greetings! I'm Rassel, currently studying Software Engineering at SMK WIKRAMA BOGOR. My fascination with technology fuels my drive to delve into coding and explore its endless possibilities. Passionate about crafting innovative
-            software solutions, I am wholeheartedly devoted to honing my skills and embracing challenges in this ever-evolving field.
+            Greetings! I’m Rassel, a recent graduate of Software Engineering from <a href="https://smkwikrama.sch.id/" target="_blank">SMK Wikrama Bogor</a>.
+            My strong fascination with technology drives me to continuously explore coding and its endless
+            possibilities. Passionate about creating innovative software solutions, I’m fully committed to sharpening my
+            skills and embracing new challenges in this fast-evolving field.
           </p>
-          <a href="#">Download CV</a>
+          <a href="/CV - Rassel Muhammad Indra.pdf" download>Download CV</a>
         </div>
       </div>
     </div>
@@ -33,56 +35,34 @@
   <section class="portfolio" id="portfolio">
     <div class="max-width">
       <h2 class="title" style="color: var(--title-color);">Portfolio</h2>
-      <div class="carousel owl-carousel">
-        <div class="card">
-          <div class="box">
-            <img src="" alt="" />
-            <div class="text">Someone name</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="portfolio-container">
+        <!-- Year Filter Navigation -->
+        <div class="year-filter">
+          <div v-for="year in availableYears" :key="year" class="year-item" :class="{ active: selectedYear === year }"
+            @click="selectedYear = year">
+            {{ year }}
           </div>
         </div>
-        <div class="card">
-          <div class="box">
-            <img src="" alt="" />
-            <div class="text">Someone name</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- Carousel -->
+        <div class="carousel-wrapper">
+          <div class="carousel owl-carousel">
           </div>
         </div>
-        <div class="card">
-          <div class="box">
-            <img src="" alt="" />
-            <div class="text">Someone name</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <img src="" alt="" />
-            <div class="text">Someone name</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="box">
-            <img src="" alt="" />
-            <div class="text">Someone name</div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
+        <div class="year-spacer"></div>
       </div>
     </div>
   </section>
 
-  <!-- services section start -->
-  <section class="services" id="services">
+  <!-- stacks section start -->
+  <section class="stacks" id="stacks">
     <div class="max-width">
-      <h2 class="title">My services</h2>
+      <h2 class="title">Tech Stack</h2>
       <div class="serv-content">
-        <div class="card">
+        <div v-for="tech in techStack" :key="tech.id" class="card">
           <div class="box">
-            <i class="fas fa-code"></i>
-            <div class="text">Apps Design</div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
+            <i :class="tech.icon"></i>
+            <div class="text">{{ tech.name }}</div>
+            <p>{{ tech.description }}</p>
           </div>
         </div>
       </div>
@@ -96,7 +76,8 @@
       <div class="contact-content">
         <div class="column left">
           <div class="text">Get in Touch</div>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos harum corporis fuga corrupti. Doloribus quis soluta nesciunt veritatis vitae nobis?</p>
+          <p>I'm always open to discussions, questions, or opportunities. Feel free to reach out via email or WhatsApp
+            for any personal or business inquiries.</p>
           <div class="icons">
             <div class="row">
               <i class="fas fa-user"></i>
@@ -109,7 +90,7 @@
               <i class="fas fa-map-marker-alt"></i>
               <div class="info">
                 <div class="head">Address</div>
-                <div class="sub-title">Warung Seri Ciawi, Bogor, Jawa Barat ,Indonesia</div>
+                <div class="sub-title">Ciawi, Bogor, Jawa Barat, Indonesia</div>
               </div>
             </div>
             <div class="row">
@@ -119,27 +100,42 @@
                 <div class="sub-title">rasselmuhamadindra@gmail.com</div>
               </div>
             </div>
+            <div class="row">
+              <i class="fas fa-phone"></i>
+              <div class="info">
+                <div class="head">Phone Number</div>
+                <div class="sub-title">+62 882-9662-6382</div>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" class="social-btn github-btn">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-btn linkedin-btn">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
           </div>
         </div>
         <div class="column right">
           <div class="text">Message me</div>
-          <form action="#">
+          <form @submit.prevent="sendEmail">
             <div class="fields">
               <div class="field name">
-                <input type="text" placeholder="Name" required />
+                <input v-model="form.name" type="text" placeholder="Name" required />
               </div>
               <div class="field email">
-                <input type="email" placeholder="Email" required />
+                <input v-model="form.email" type="email" placeholder="Email" required />
               </div>
             </div>
             <div class="field">
-              <input type="text" placeholder="Subject" required />
+              <input v-model="form.subject" type="text" placeholder="Subject" required />
             </div>
             <div class="field textarea">
-              <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+              <textarea v-model="form.message" cols="30" rows="10" placeholder="Message.." required></textarea>
             </div>
             <div class="button-area">
-              <button type="submit">Send message</button>
+              <button type="submit" :disabled="isSubmitting">{{ isSubmitting ? 'Sending...' : 'Send message' }}</button>
             </div>
           </form>
         </div>
@@ -149,84 +145,180 @@
 
   <!-- footer section start -->
   <footer>
-    <span>Created and Modified By <a href="">Rassel</a> | <span class="far fa-copyright"></span> 2023 All rights reserved.</span>
+    <div class="footer-content">
+      <p class="footer-text">Crafted by <a href="#home">Rassel Muhammad Indra</a></p>
+      <p class="footer-divider">|</p>
+      <p class="footer-text"><span class="far fa-copyright"></span> 2026 All rights reserved.</p>
+    </div>
   </footer>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      selectedYear: 2026,
+      isSubmitting: false,
+      form: {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      },
+      techStack: [
+        { id: 1, name: "Frontend", icon: "fas fa-palette", description: "Vue.js, React, HTML5, CSS3, JavaScript - Building responsive and interactive user interfaces" },
+        { id: 2, name: "Backend", icon: "fas fa-server", description: "Node.js, Express, Python - Creating robust server-side applications and APIs" },
+        { id: 3, name: "Database", icon: "fas fa-database", description: "MongoDB, MySQL, PostgreSQL - Managing and optimizing data storage solutions" },
+        { id: 4, name: "Tools & DevOps", icon: "fas fa-tools", description: "Git, Docker, Vite, Webpack - Streamlining development workflow and deployment" },
+        { id: 5, name: "Mobile", icon: "fas fa-mobile-alt", description: "React Native, Flutter - Developing cross-platform mobile applications" },
+        { id: 6, name: "Cloud", icon: "fas fa-cloud", description: "AWS, Firebase, Vercel - Deploying and managing cloud-based solutions" }
+      ],
+      portfolioProjects: [
+        { id: 1, title: "Shit 1", description: "Shit i worked on", image: "/portfolio-1.png", year: 2026 },
+        { id: 2, title: "Shit 2", description: "Shit i worked on", image: "/portfolio-2.png", year: 2025 },
+        { id: 3, title: "Shit 3", description: "Shit i worked on", image: "/portfolio-3.png", year: 2025 },
+        { id: 4, title: "Shit 4", description: "Shit i worked on", image: "/portfolio-4.png", year: 2024 },
+        { id: 5, title: "Shit 5", description: "Shit i worked on", image: "/portfolio-5.png", year: 2023 }
+      ]
+    }
+  },
+  computed: {
+    availableYears() {
+      const years = [...new Set(this.portfolioProjects.map(p => p.year))];
+      return years.sort((a, b) => b - a);
+    },
+    filteredProjects() {
+      return this.portfolioProjects.filter(p => p.year === this.selectedYear);
+    }
+  },
   mounted() {
+    this.$nextTick(() => {
+      this.initCarousel();
+    });
+
     $(document).ready(() => {
       $(window).scroll(() => {
-        // sticky navbar on scroll script
-        if (this.scrollY > 20) {
+        if (window.scrollY > 20) {
           $('.navbar').addClass("sticky");
         } else {
           $('.navbar').removeClass("sticky");
         }
-
-        // scroll-up button show/hide script
-        if (this.scrollY > 500) {
+        if (window.scrollY > 500) {
           $('.scroll-up-btn').addClass("show");
         } else {
           $('.scroll-up-btn').removeClass("show");
         }
       });
 
-      // slide-up script
       $('.scroll-up-btn').click(() => {
         $('html').animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
       });
 
       $('.navbar .menu li a').click(() => {
-        // applying again smooth scroll on menu items click
         $('html').css("scrollBehavior", "smooth");
       });
 
-      // toggle menu/navbar script
       $('.menu-btn').click(() => {
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
       });
 
-      // typing text animation script
-      let typed = new Typed(".typing", {
-        strings: ["Software Engineer"],
-        typeSpeed: 100,
-        backSpeed: 100,
+      if (document.querySelector(".typing")) {
+        new Typed(".typing", {
+          strings: ["Software Engineer"],
+          typeSpeed: 100,
+          backSpeed: 100,
+          loop: true
+        });
+      }
+    });
+  },
+  watch: {
+    selectedYear() {
+      this.$nextTick(() => {
+        this.initCarousel();
       });
+    }
+  },
+  methods: {
+    async sendEmail() {
+      this.isSubmitting = true;
+      try {
+        const response = await fetch('https://formspree.io/f/xojbapqb', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.form.name,
+            email: this.form.email,
+            subject: this.form.subject,
+            message: this.form.message,
+            _replyto: this.form.email
+          })
+        });
 
-      let typed2 = new Typed(".typing-2", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-      });
+        if (response.ok) {
+          alert('Message sent successfully!');
+          this.form = { name: '', email: '', subject: '', message: '' };
+        } else {
+          alert('Failed to send message. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error sending message. Please try again.');
+      } finally {
+        this.isSubmitting = false;
+      }
+    },
+    buildSlides(projects) {
+      // Build slide HTML manually — no v-for, pure JS
+      return projects.map(project => `
+        <div class="card">
+          <div class="box">
+            <img src="${project.image}" alt="${project.title}" />
+            <div class="text">${project.title}</div>
+            <p>${project.description}</p>
+          </div>
+        </div>
+      `).join('');
+    },
 
-      // owl carousel script
-      $('.carousel').owlCarousel({
+    initCarousel() {
+      const $carousel = $('.carousel');
+
+      // Step 1: destroy Owl if active
+      if ($carousel.hasClass('owl-loaded')) {
+        $carousel.trigger('destroy.owl.carousel');
+        $carousel.removeClass('owl-loaded owl-drag owl-text-select-off');
+      }
+
+      // Step 2: clear and inject fresh slides directly (no Vue DOM involvement)
+      $carousel.empty();
+      const projects = this.filteredProjects;
+
+      if (projects.length === 0) {
+        $carousel.html('<div class="card"><div class="box"><p>No projects for this year.</p></div></div>');
+      } else {
+        $carousel.html(this.buildSlides(projects));
+      }
+
+      // Step 3: init Owl on the fresh HTML
+      $carousel.owlCarousel({
         margin: 20,
-        loop: true,
-        autoplay: true,
+        loop: false,
+        autoplay: false,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
+        dots: true,
+        nav: false,
         responsive: {
-          0: {
-            items: 1,
-            nav: false
-          },
-          600: {
-            items: 2,
-            nav: false
-          },
-          1000: {
-            items: 3,
-            nav: false
-          }
+          0: { items: 1 },
+          600: { items: 1 },
+          1000: { items: 1 }
         }
       });
-    });
+    }
   }
 }
 </script>

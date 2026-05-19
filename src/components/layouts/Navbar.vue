@@ -14,16 +14,9 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#stacks">Stacks</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-
-      <div class="darkLight-searchBox">
-        <div class="dark-light">
-          <i class="bx bx-moon moon"></i>
-          <i class="bx bx-sun sun"></i>
-        </div>
       </div>
     </div>
   </nav>
@@ -35,23 +28,12 @@ export default {
     loadScript() { 
       const body = document.querySelector("body");
       const nav = document.querySelector("nav");
-      const modeToggle = document.querySelector(".dark-light");
       const sidebarOpen = document.querySelector(".sidebarOpen");
       const siderbarClose = document.querySelector(".siderbarClose");
 
-      let getMode = localStorage.getItem("mode");
-      if (getMode && getMode === "dark-mode") {
-        body.classList.add("dark");
-      }
-      modeToggle.addEventListener("click", () => {
-        modeToggle.classList.toggle("active");
-        body.classList.toggle("dark");
-        if (!body.classList.contains("dark")) {
-          localStorage.setItem("mode", "light-mode");
-        } else {
-          localStorage.setItem("mode", "dark-mode");
-        }
-      });
+      // Always use dark mode
+      body.classList.add("dark");
+      
       sidebarOpen.addEventListener("click", () => {
         nav.classList.add("active");
       });
@@ -69,6 +51,8 @@ export default {
     this.$nextTick(function () {
       this.loadScript();
     });
+    // Force dark mode on mount
+    document.body.classList.add("dark");
   }
 }
 </script>
