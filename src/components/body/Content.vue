@@ -16,7 +16,7 @@
       <h2 class="title">About me</h2>
       <div class="about-content">
         <div class="column left">
-          <img src="profile.png" alt="" />
+          <img src="/profile.png" alt="Profile" />
         </div>
         <div class="column right">
           <p>
