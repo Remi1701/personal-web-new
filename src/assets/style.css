@@ -676,6 +676,11 @@ section .title::after {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.portfolio .carousel .card p {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .portfolio .carousel .card img {

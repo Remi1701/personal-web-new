@@ -109,10 +109,10 @@
             </div>
           </div>
           <div class="social-links">
-            <a href="https://github.com" target="_blank" class="social-btn github-btn">
+            <a href="https://github.com/Remi1701" target="_blank" class="social-btn github-btn">
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="https://linkedin.com" target="_blank" class="social-btn linkedin-btn">
+            <a href="https://www.linkedin.com/in/rassel-muhammad-indra-b3b96b275/" target="_blank" class="social-btn linkedin-btn">
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
           </div>
@@ -165,12 +165,12 @@ export default {
         message: ''
       },
       techStack: [
-        { id: 1, name: "Frontend", icon: "fas fa-palette", description: "Vue.js, React, HTML5, CSS3, JavaScript - Building responsive and interactive user interfaces" },
-        { id: 2, name: "Backend", icon: "fas fa-server", description: "Node.js, Express, Python - Creating robust server-side applications and APIs" },
+        { id: 1, name: "Frontend", icon: "fas fa-palette", description: "Vue.js, Laravel, HTML5, CSS3, JavaScript - Building responsive and interactive user interfaces" },
+        { id: 2, name: "Backend", icon: "fas fa-server", description: "Laravel, C++, Python - Creating robust server-side applications and APIs" },
         { id: 3, name: "Database", icon: "fas fa-database", description: "MongoDB, MySQL, PostgreSQL - Managing and optimizing data storage solutions" },
         { id: 4, name: "Tools & DevOps", icon: "fas fa-tools", description: "Git, Docker, Vite, Webpack - Streamlining development workflow and deployment" },
-        { id: 5, name: "Mobile", icon: "fas fa-mobile-alt", description: "React Native, Flutter - Developing cross-platform mobile applications" },
-        { id: 6, name: "Cloud", icon: "fas fa-cloud", description: "AWS, Firebase, Vercel - Deploying and managing cloud-based solutions" }
+        { id: 5, name: "Mobile", icon: "fas fa-mobile-alt", description: "Flutter - Developing cross-platform mobile applications" },
+        { id: 6, name: "Cloud", icon: "fas fa-cloud", description: "AWS, Vercel - Deploying and managing cloud-based solutions" }
       ],
       portfolioProjects: [
         { id: 1, title: "Shit 1", description: "Shit i worked on", image: "/portfolio-1.png", year: 2026 },
