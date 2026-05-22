@@ -1076,32 +1076,39 @@ body.dark footer {
   }
 
   .portfolio-container {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
   }
 
   .year-filter {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .year-spacer {
+    display: none;
+  }
+
+  .carousel-wrapper{
+    width: 100%;
   }
 
   .year-item {
     border-left: none;
     border-bottom: 3px solid transparent;
-    padding: 10px 15px;
+    padding: 8px 12px;
   }
 
-  .year-item:hover {
-    border-left: none;
-    border-bottom-color: var(--icon);
-    padding-left: 15px;
-  }
-
+  .year-item:hover,
   .year-item.active {
     border-left: none;
     border-bottom-color: var(--icon);
+    padding-left: 12px;
   }
 
   .portfolio .carousel .card img {
