@@ -15,10 +15,7 @@
     <div class="max-width">
       <h2 class="title">About me</h2>
       <div class="about-content">
-        <div class="column left">
-          <img src="/profile.png" alt="Profile" />
-        </div>
-        <div class="column right">
+        <div class="about-text">
           <p>
             Greetings! I’m Rassel, a recent graduate of Software Engineering from <a href="https://smkwikrama.sch.id/" target="_blank">SMK Wikrama Bogor</a>.
             My strong fascination with technology drives me to continuously explore coding and its endless
@@ -156,7 +153,7 @@
 export default {
   data() {
     return {
-      selectedYear: 2026,
+      selectedYear: 2024,
       isSubmitting: false,
       form: {
         name: '',
@@ -173,11 +170,10 @@ export default {
         { id: 6, name: "Cloud", icon: "fas fa-cloud", description: "AWS, Vercel - Deploying and managing cloud-based solutions" }
       ],
       portfolioProjects: [
-        { id: 1, title: "Shit 1", description: "Shit i worked on", image: "/portfolio-1.png", year: 2026 },
-        { id: 2, title: "Shit 2", description: "Shit i worked on", image: "/portfolio-2.png", year: 2025 },
-        { id: 3, title: "Shit 3", description: "Shit i worked on", image: "/portfolio-3.png", year: 2025 },
-        { id: 4, title: "Shit 4", description: "Shit i worked on", image: "/portfolio-4.png", year: 2024 },
-        { id: 5, title: "Shit 5", description: "Shit i worked on", image: "/portfolio-5.png", year: 2023 }
+        { id: 1, title: "1st Personal Website CV", description: "My first ever self-made website with pure HTML and CSS", image: "/portfolio-1.png", year: 2022 },
+        { id: 2, title: "2nd Personal Website", description: "My second personal website with better knowledge on CSS animation", image: "/portfolio-2.png", year: 2022 },
+        { id: 3, title: "Caferatu", description: "A coffee shop management system with orders and flexible menu inventory built with PHP", image: "/portfolio-3.png", year: 2023 },
+        { id: 4, title: "Flutter Personal Website", description: "A personal website built with Flutter", image: "/portfolio-4.png", year: 2024 },
       ]
     }
   },
