@@ -109,7 +109,7 @@
             <a href="https://github.com/Remi1701" target="_blank" class="social-btn github-btn">
               <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/rassel-muhammad-indra-b3b96b275/" target="_blank" class="social-btn linkedin-btn">
+            <a href="https://www.linkedin.com/in/rassel-muhammad-indra" target="_blank" class="social-btn linkedin-btn">
               <i class="fab fa-linkedin"></i> LinkedIn
             </a>
           </div>
