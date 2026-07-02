@@ -174,6 +174,8 @@ export default {
         { id: 2, title: "2nd Personal Website", description: "My second personal website with better knowledge on CSS animation", image: "/portfolio-2.png", year: 2022 },
         { id: 3, title: "Caferatu", description: "A coffee shop management system with orders and flexible menu inventory built with PHP", image: "/portfolio-3.png", year: 2023 },
         { id: 4, title: "Flutter Personal Website", description: "A personal website built with Flutter", image: "/portfolio-4.png", year: 2024 },
+        { id: 5, title: "Sivina Enesis Application", description: "Data collection system for RDC and RA survey", image: "/portfolio-5.png", year: 2024 },
+        { id: 6, title: "Dashboard Monitor Genangan Banjir DAS Ciliwung", description: "A dashboard for monitoring flood inundation in the Ciliwung watershed", image: "/portfolio-6.png", year: 2024 }
       ]
     }
   },
