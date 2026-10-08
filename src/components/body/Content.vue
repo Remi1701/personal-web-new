@@ -18,6 +18,8 @@
         <div class="about-text">
           <p>
             Greetings! I’m Rassel, a recent graduate of Software Engineering from <a href="https://smkwikrama.sch.id/" target="_blank">SMK Wikrama Bogor</a>.
+            I am now pursuing a degree in Computer Science at <a href="https://www.unida.ac.id//" target="_blank">Universitas Djuanda</a>.
+            My journey in the world of technology has been fueled by a deep passion for coding and software development.
             My strong fascination with technology drives me to continuously explore coding and its endless
             possibilities. Passionate about creating innovative software solutions, I’m fully committed to sharpening my
             skills and embracing new challenges in this fast-evolving field.
@@ -175,7 +177,8 @@ export default {
         { id: 3, title: "Caferatu", description: "A coffee shop management system with orders and flexible menu inventory built with PHP", image: "/portfolio-3.png", year: 2023 },
         { id: 4, title: "Flutter Personal Website", description: "A personal website built with Flutter", image: "/portfolio-4.png", year: 2024 },
         { id: 5, title: "Sivina Enesis Application", description: "Data collection system for RDC and RA survey", image: "/portfolio-5.png", year: 2024 },
-        { id: 6, title: "Dashboard Monitor Genangan Banjir DAS Ciliwung", description: "A dashboard for monitoring flood inundation in the Ciliwung watershed", image: "/portfolio-6.png", year: 2024 }
+        { id: 6, title: "Dashboard Monitor Genangan Banjir DAS Ciliwung", description: "A dashboard for monitoring flood inundation in the Ciliwung watershed", image: "/portfolio-6.png", year: 2024 },
+        { id: 7, title: "Lagermeister", description: "An inventory system for a fictional small wholesale client *Nordwald Handels GmbH", image: "/portfolio-7.png", year: 2026 }
       ]
     }
   },
